@@ -1,3 +1,12 @@
+yumrepo { 'puppetlabs-pc1':
+ensure => 'present',
+baseurl => 'http://yum.puppetlabs.com/el/7/PC1/$basearch',
+descr => 'Puppet Labs PC1 Repository el 7 - $basearch',
+enabled => '1',
+gpgcheck => '1',
+gpgkey => 'https://yum.puppetlabs.com/RPM-GPG-KEY-puppet https://yum.puppetlabs.com/RPM-GPG-KEY-puppetlabs'
+}
+
 if $::hostname == 'puppet' {
   notice ( "Hostname is $::hostname" )
   package { 'puppetserver':
