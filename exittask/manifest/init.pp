@@ -9,12 +9,16 @@ if $::hostname == 'puppet' {
   }
   service { 'puppetserver':
   ensure => 'running',
-  require => package['puppetserver'],
+  require => Package['puppetserver'],
   }
 }
 
 else {
   notice ( "install for client" )
+  host { 'puppet.minsk.epam.com':
+  host_aliases => 'puppet',
+  ip           => '192.168.25.110',
+  }
   package { 'puppet-agent':
   ensure => 'latest',
   }
