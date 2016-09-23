@@ -2,7 +2,9 @@
 #
 class exittask::forclient {
   notice ( '!!!!!!!!!!!!!!!!!!!its class forclient!!!!!!!!!!!!!!!!!!!' )
-# add yum repo for latest puppet
+  notice ( 'install for client' )
+
+
   yumrepo { 'puppetlabs-pc1':
     ensure   => 'present',
     baseurl  => 'http://yum.puppetlabs.com/el/7/PC1/$basearch',

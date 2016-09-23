@@ -23,8 +23,8 @@ class exittask::formaster {
 
 # create autosign file
   file { '/etc/puppetlabs/puppet/autosign.conf':
-    ensure  => file,
     content => template('exittask/autosign.erb'),
+    ensure  => file,
     owner   => root,
     group   => root,
     mode    => '0644',
