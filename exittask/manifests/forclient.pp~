@@ -1,0 +1,15 @@
+class exittask::forclient {
+  notice ( "!!!!!!!!!!!!!!!!!!!its class forclient!!!!!!!!!!!!!!!!!!!" )
+  notice ( "install for client" )
+  host { 'puppet.minsk.epam.com':
+  host_aliases => 'puppet',
+  ip           => '192.168.25.110',
+  }
+  package { 'puppet-agent':
+  ensure => 'latest',
+  }
+  service { 'puppet':
+  ensure => 'running',
+  }
+  notice ('!!!!!!!!!!!!!!!finish class forclient!!!!!!!!!!!!!!!!!')
+}

@@ -1,0 +1,15 @@
+{
+  "name": "test-test",
+  "version": "0.1.0",
+  "author": "Evgeniy_Krupen",
+  "summary": "Install Puppet Server\\Agent",
+  "license": "Open_source",
+  "source": "github.com",
+  "project_page": "puppet.com",
+  "issues_url": "github.com",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+

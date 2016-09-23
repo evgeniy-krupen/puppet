@@ -1,0 +1,10 @@
+class exittask {
+if $::hostname == 'web2' {
+  include exittask::formaster
+}
+
+else {
+  include exittask::forclient
+}
+
+}
