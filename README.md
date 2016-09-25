@@ -1,7 +1,7 @@
 # Exit task report
 Student: [Evgeniy_Krupen](https://upsa.epam.com/workload/employeeView.do?employeeId=4060741400038655484#emplTab=general)
 
-1. I made [Vagrantfile](https://github.com/evgeniy-krupen/puppet/blob/master/Vagrantfile) with "sbeliakou/centos-7.2-x86_64" CentOS 7 image for exit task. Therefore I already had EPEL repo in image.
+1. I made [Vagrantfile](https://github.com/evgeniy-krupen/puppet/blob/master/Vagrantfile) with "sbeliakou/centos-7.2-x86_64" CentOS 7 image for exit task. Therefore I had EPEL repo in image.
 
 2. I used [puppet.sh](https://github.com/evgeniy-krupen/puppet/blob/master/puppet.sh) as provisioning by Vagrant.
 
