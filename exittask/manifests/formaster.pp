@@ -17,8 +17,9 @@ class exittask::formaster ($version = '2.6.0-1.el7') {
   }
 # source bash_profile
   exec { 'root_bash_profile':
-  command  => 'source /root/.bash_profile',
-  provider => shell,
+  command   => 'source /root/.bash_profile',
+  provider  => shell,
+  subscribe => File['/etc/puppetlabs/puppet/autosign.conf']
   }
 
 # create autosign file
