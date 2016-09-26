@@ -1,6 +1,6 @@
 #
 #
-class exittask::formaster {
+class exittask::formaster ($version = '2.6.0-1.el7') {
 # add yum repo for latest puppet
   yumrepo { 'puppetlabs-pc1':
     ensure   => 'present',
@@ -13,7 +13,7 @@ class exittask::formaster {
   notice ( "Hostname is ${::hostname}" )
 # install puppetserver
   package { 'puppetserver':
-  ensure => 'installed',
+  ensure => '$version',
   }
 # source bash_profile
   exec { 'root_bash_profile':
@@ -29,6 +29,7 @@ class exittask::formaster {
     group   => root,
     mode    => '0644',
     backup  => false,
+    require => Package['puppetserver']
   }
 
 # run service
